@@ -21,10 +21,10 @@ public class PlayerTesr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            TakeDamage(10);
-        }
+      //  if (Input.GetMouseButtonDown(0))
+       // {
+      //      TakeDamage(10);
+      //  }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
