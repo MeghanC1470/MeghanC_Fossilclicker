@@ -11,7 +11,7 @@ public class GlobalAutoClick : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCalcium;
-    public static int calciumValue = 35;
+    public static int calciumValue = 25;
     public static bool turnOffButton = false;
     public GameObject calciumStats;
     public static int numberOfShovels;

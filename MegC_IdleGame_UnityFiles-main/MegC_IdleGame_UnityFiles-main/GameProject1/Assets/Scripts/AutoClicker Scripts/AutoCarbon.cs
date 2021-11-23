@@ -11,6 +11,7 @@ public class AutoCarbon : MonoBehaviour
 
     void Update()
     {
+        CarbonIncrease = GlobalAutoClick.carbonPerSec;
         InternalIncrease = CarbonIncrease;
         if (CreatingCarbon == false)
         {

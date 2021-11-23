@@ -21,10 +21,10 @@ public class EarthquakeScript : MonoBehaviour
     void Update()
     {
 
-        carbonCheck = GlobalCarbon.CarbonCount / 10;
+        carbonCheck = GlobalCarbon.CarbonCount / 35;
         if (disasterActive == false)
         {
-            genChance = Random.Range(1, 20);
+            genChance = Random.Range(1, 50);
             if (carbonCheck >= genChance)
             {
                 StartCoroutine(StartDisaster());
@@ -36,11 +36,13 @@ public class EarthquakeScript : MonoBehaviour
     IEnumerator StartDisaster()
     {
         disasterActive = true;
-            carbonLoss = Mathf.RoundToInt(GlobalCarbon.CarbonCount * 0.25f);
+            carbonLoss = Mathf.RoundToInt(GlobalCarbon.CarbonCount * 0.10f);
             GlobalCarbon.CarbonCount -= carbonLoss;
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             healthBar.TakeDamage(10);
         yield return new WaitForSeconds(10);
         disasterActive = false;
     }
+
+
 }

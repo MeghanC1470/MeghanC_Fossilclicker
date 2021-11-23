@@ -11,6 +11,7 @@ public class AutoCalcium : MonoBehaviour
 
     void Update()
     {
+        CalciumIncrease = GlobalAutoClick2.calciumPerSec;
         InternalIncrease = CalciumIncrease;
         if (CreatingCalcium == false)
         {

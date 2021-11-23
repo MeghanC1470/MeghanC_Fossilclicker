@@ -11,15 +11,15 @@ public class GlobalAutoClickRepair : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCarbon;
-    public static int carbonValue = 15;
+    public static int carbonValue = 5;
     public static bool turnOffButton = false;
 
 
     void Update()
     {
         currentCarbon = GlobalCarbon.CarbonCount;
-        fakeText.GetComponent<Text>().text = "Repair Skeleton " + carbonValue + " carbon";
-        realText.GetComponent<Text>().text = "Repair Skeleton " + carbonValue + " carbon";
+        fakeText.GetComponent<Text>().text = "Repair Skeleton - " + carbonValue + " carbon";
+        realText.GetComponent<Text>().text = "Repair Skeleton - " + carbonValue + " carbon";
         if (currentCarbon >= carbonValue)
         {
             fakeButton.SetActive(false);

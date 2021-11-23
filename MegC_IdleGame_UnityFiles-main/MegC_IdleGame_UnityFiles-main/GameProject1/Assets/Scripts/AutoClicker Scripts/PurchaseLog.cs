@@ -8,6 +8,7 @@ public class PurchaseLog : MonoBehaviour
     public GameObject AutoCarbon;
     public GameObject AutoCalcium;
     public GameObject RepairSkeleton;
+    public GameObject DisasterReady;
     public PlayerTesr playerHealth;
     public HealthBar healthBar;
 
@@ -40,4 +41,13 @@ public class PurchaseLog : MonoBehaviour
         playerHealth.RepairDamage(10);
 
     }
+
+ //   public void StartDisasterReady()
+ //   {
+ //       DisasterReady.SetActive(true);
+ //       GlobalCalcium.CalciumCount -= GlobalAutoClickHealth.calciumValue;
+ //       GlobalAutoClickHealth.calciumValue *= 2;
+ //       GlobalAutoClickHealth.turnOffButton = true;
+ //       playerHealth.TakeDamage(10) -= 1;
+ //   }
 }
