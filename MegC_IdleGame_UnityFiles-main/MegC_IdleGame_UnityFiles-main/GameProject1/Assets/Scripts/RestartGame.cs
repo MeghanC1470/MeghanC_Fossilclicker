@@ -9,6 +9,7 @@ public class RestartGame : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("MainScene");
-        Debug.Log("button clicked");
+        GlobalCarbon.CarbonCount = 0;
+        GlobalCalcium.CalciumCount = 0;
     }
 }

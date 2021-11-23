@@ -45,7 +45,7 @@ public class EarthquakeScript : MonoBehaviour
             carbonLoss = Mathf.RoundToInt(GlobalCarbon.CarbonCount * 0.10f);
             GlobalCarbon.CarbonCount -= carbonLoss;
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
-            playerBar.TakeDamage(10);
+            playerBar.TakeDamage(50);
         yield return new WaitForSeconds(10);
         disasterActive = false;
     }

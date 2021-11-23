@@ -10,6 +10,9 @@ public class PlayerTesr : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameObject AutoCarbon;
+    public GlobalAutoClick2 autoCalcium;
+    public GlobalAutoClickRepair autoRepair;
     public int repair;
     public int damage;
 
@@ -35,5 +38,8 @@ public class PlayerTesr : MonoBehaviour
     public void EndGame()
     {
         SceneManager.LoadScene("LoseScreen");
+        AutoCarbon.SetActive(false);
+        //   autoCalcium.SetActive(false);
+        //   autoRepair.SetActive(false);
     }
 }
