@@ -10,7 +10,8 @@ public class EarthquakeScript : MonoBehaviour
     public bool disasterActive = false;
     public int genChance;
     public int carbonLoss;
-    public PlayerTesr healthBar;
+    public PlayerTesr playerBar;
+    public HealthBar healthBar;
 
     void Start()
     {
@@ -31,6 +32,11 @@ public class EarthquakeScript : MonoBehaviour
             }
 
         }
+
+        if (playerBar.currentHealth <= 0)
+        {
+            playerBar.EndGame();
+        }
     }
 
     IEnumerator StartDisaster()
@@ -39,7 +45,7 @@ public class EarthquakeScript : MonoBehaviour
             carbonLoss = Mathf.RoundToInt(GlobalCarbon.CarbonCount * 0.10f);
             GlobalCarbon.CarbonCount -= carbonLoss;
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
-            healthBar.TakeDamage(10);
+            playerBar.TakeDamage(10);
         yield return new WaitForSeconds(10);
         disasterActive = false;
     }

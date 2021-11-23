@@ -1145,7 +1145,8 @@ MonoBehaviour:
   disasterActive: 0
   genChance: 0
   carbonLoss: 0
-  healthBar: {fileID: 526765788}
+  playerBar: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!4 &510005677
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,7 +1357,8 @@ MonoBehaviour:
   disasterActive: 0
   genChance: 0
   carbonLoss: 0
-  healthBar: {fileID: 526765788}
+  playerBar: {fileID: 526765788}
+  healthBar: {fileID: 1700540787}
 --- !u!1 &526765785
 GameObject:
   m_ObjectHideFlags: 0

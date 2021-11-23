@@ -34,9 +34,6 @@ public class PlayerTesr : MonoBehaviour
 
     public void EndGame()
     {
-        if (currentHealth == 0)
-        {
-                SceneManager.LoadScene("LoseScreen");
-        }
+        SceneManager.LoadScene("LoseScreen");
     }
 }
