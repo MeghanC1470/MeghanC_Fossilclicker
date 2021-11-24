@@ -10,11 +10,12 @@ public class PlayerTesr : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
-    public GameObject AutoCarbon;
     public GlobalAutoClick2 autoCalcium;
-    public GlobalAutoClickRepair autoRepair;
     public int repair;
     public int damage;
+    public GameObject AutoCarbon;
+    public GameObject AutoCalcium;
+    public GameObject RepairSkeleton;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,7 @@ public class PlayerTesr : MonoBehaviour
     {
         SceneManager.LoadScene("LoseScreen");
         AutoCarbon.SetActive(false);
-        //   autoCalcium.SetActive(false);
-        //   autoRepair.SetActive(false);
+        AutoCalcium.SetActive(false);
+        RepairSkeleton.SetActive(false);
     }
 }

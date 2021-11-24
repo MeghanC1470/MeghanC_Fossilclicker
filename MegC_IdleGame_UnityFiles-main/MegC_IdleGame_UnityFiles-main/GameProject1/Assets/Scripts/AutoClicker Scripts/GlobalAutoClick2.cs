@@ -11,7 +11,7 @@ public class GlobalAutoClick2 : MonoBehaviour
     public GameObject realButton;
     public GameObject realText;
     public int currentCarbon;
-    public static int carbonValue = 15;
+    public static int carbonValue = 10;
     public static bool turnOffButton = false;
     public GameObject carbonStats;
     public static int numberOfExtracts;
