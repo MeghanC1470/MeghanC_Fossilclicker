@@ -11,5 +11,6 @@ public class RestartGame : MonoBehaviour
         SceneManager.LoadScene("MainScene");
         GlobalCarbon.CarbonCount = 0;
         GlobalCalcium.CalciumCount = 0;
+
     }
 }

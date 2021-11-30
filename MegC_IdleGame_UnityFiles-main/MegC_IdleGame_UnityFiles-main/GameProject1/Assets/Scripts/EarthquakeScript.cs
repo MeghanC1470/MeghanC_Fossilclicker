@@ -12,6 +12,8 @@ public class EarthquakeScript : MonoBehaviour
     public int carbonLoss;
     public PlayerTesr playerBar;
     public HealthBar healthBar;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class EarthquakeScript : MonoBehaviour
             if (carbonCheck >= genChance)
             {
                 StartCoroutine(StartDisaster());
+                
             }
 
         }
@@ -45,9 +48,10 @@ public class EarthquakeScript : MonoBehaviour
             carbonLoss = Mathf.RoundToInt(GlobalCarbon.CarbonCount * 0.10f);
             GlobalCarbon.CarbonCount -= carbonLoss;
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
-            playerBar.TakeDamage(50);
+            playerBar.TakeDamage(5);
         yield return new WaitForSeconds(10);
         disasterActive = false;
+        audioSource.PlayOneShot(clip);
     }
 
 
